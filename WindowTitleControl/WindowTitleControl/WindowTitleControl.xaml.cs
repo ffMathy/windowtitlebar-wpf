@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
 
 namespace Controls
 {
@@ -11,7 +12,7 @@ namespace Controls
     {
         private Window Window
         {
-            get { return Parent as Window; }
+            get { return FindAncestor<Window>(this); }
         }
 
         public WindowTitleControl()
@@ -22,6 +23,17 @@ namespace Controls
         private void DraggableBar(object sender, MouseButtonEventArgs e)
         {
             Window.DragMove();
+        }
+
+        private static T FindAncestor<T>(DependencyObject dependencyObject)
+            where T : DependencyObject
+        {
+            var parent = VisualTreeHelper.GetParent(dependencyObject);
+ 
+            if (parent == null) return null;
+ 
+            var parentT = parent as T;
+            return parentT ?? FindAncestor<T>(parent);
         }
     }
 }

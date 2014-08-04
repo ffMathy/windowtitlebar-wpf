@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowTitleControl", "WindowTitleControl\WindowTitleControl.csproj", "{31039349-F650-4905-92DD-CA35EFB93128}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowTitleControl.Sample", "WindowTitleControl.Sample\WindowTitleControl.Sample.csproj", "{3E1314DB-84D9-443C-8FBA-28ED2067A297}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{31039349-F650-4905-92DD-CA35EFB93128}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31039349-F650-4905-92DD-CA35EFB93128}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31039349-F650-4905-92DD-CA35EFB93128}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E1314DB-84D9-443C-8FBA-28ED2067A297}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E1314DB-84D9-443C-8FBA-28ED2067A297}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E1314DB-84D9-443C-8FBA-28ED2067A297}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E1314DB-84D9-443C-8FBA-28ED2067A297}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
