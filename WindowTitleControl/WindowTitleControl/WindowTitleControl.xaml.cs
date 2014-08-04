@@ -46,7 +46,6 @@ namespace Controls
             InitializeComponent();
 
             Height = SystemInformation.CaptionHeight;
-            Height = SystemInformation.CaptionHeight;
 
             Loaded += WindowTitleControl_Loaded;
         }
@@ -60,6 +59,7 @@ namespace Controls
         {
             AeroResourceInitializer.Initialize();
 
+            //take control of dragging.
             Window.MouseDown += Window_MouseDown;
         }
 
