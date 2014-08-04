@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using AeroColor;
+using UserControl = System.Windows.Controls.UserControl;
 
 namespace Controls
 {
@@ -43,22 +44,28 @@ namespace Controls
         public WindowTitleControl()
         {
             InitializeComponent();
+
+            Height = SystemInformation.CaptionHeight;
+            Height = SystemInformation.CaptionHeight;
+
             Loaded += WindowTitleControl_Loaded;
+        }
+
+        void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Window.DragMove();
         }
 
         void WindowTitleControl_Loaded(object sender, RoutedEventArgs e)
         {
             AeroResourceInitializer.Initialize();
+
+            Window.MouseDown += Window_MouseDown;
         }
 
         private Window Window
         {
             get { return FindAncestor<Window>(this); }
-        }
-
-        private void DraggableBar(object sender, MouseButtonEventArgs e)
-        {
-            Window.DragMove();
         }
 
         private static T FindAncestor<T>(DependencyObject dependencyObject)
