@@ -4,13 +4,86 @@
         xmlns:controls="clr-namespace:Controls;assembly=WindowTitleControl"
         Title="Some window title"  Height="400" Width="400" 
         WindowStyle="None"
-        ResizeMode="NoResize">
+        ResizeMode="CanResizeWithGrip"
+        AllowsTransparency="True">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <controls:WindowTitleControl ShowOptions="True" ShowOptionsRequested="WindowTitleControl_OnShowOptionsRequested" />
+        
+        <!-- Non-customized -->
+        <controls:WindowTitleControl ShowOptions="True" ShowOptionsRequested="WindowTitleControl_OnShowOptionsRequested" Grid.Row="0" />
+        
+        <!-- Customized -->
+        <controls:WindowTitleControl ShowOptions="True" ShowOptionsRequested="WindowTitleControl_OnShowOptionsRequested" Grid.Row="1">
+            <!-- Mouse Over Background -->
+            <controls:WindowTitleControl.RegularButtonMouseOverBackgroundBrush>
+                <LinearGradientBrush>
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Blue" Offset="1" />
+                </LinearGradientBrush>
+            </controls:WindowTitleControl.RegularButtonMouseOverBackgroundBrush>
+            <controls:WindowTitleControl.CloseButtonMouseOverBackgroundBrush>
+                <LinearGradientBrush>
+                    <GradientStop Color="Yellow" Offset="0" />
+                    <GradientStop Color="Purple" Offset="1" />
+                </LinearGradientBrush>
+            </controls:WindowTitleControl.CloseButtonMouseOverBackgroundBrush>
+            
+            <!-- Mouse Down Background -->
+            <controls:WindowTitleControl.RegularButtonMouseDownBackgroundBrush>
+                <LinearGradientBrush>
+                    <GradientStop Color="Red" Offset="1" />
+                    <GradientStop Color="Blue" Offset="0" />
+                </LinearGradientBrush>
+            </controls:WindowTitleControl.RegularButtonMouseDownBackgroundBrush>
+            <controls:WindowTitleControl.CloseButtonMouseDownBackgroundBrush>
+                <LinearGradientBrush>
+                    <GradientStop Color="Yellow" Offset="1" />
+                    <GradientStop Color="Purple" Offset="0" />
+                </LinearGradientBrush>
+            </controls:WindowTitleControl.CloseButtonMouseDownBackgroundBrush>
+            
+            <!-- Icons -->
+            <!-- Static Color -->
+            <controls:WindowTitleControl.StaticButtonIconBrush>
+                <LinearGradientBrush>
+                    <GradientStop Color="Black" Offset="0" />
+                    <GradientStop Color="White" Offset="1" />
+                </LinearGradientBrush>
+            </controls:WindowTitleControl.StaticButtonIconBrush>
+
+            <!-- Mouse Hover Color -->
+            <controls:WindowTitleControl.RegularButtonIconMouseHoverBrush>
+                <LinearGradientBrush>
+                    <GradientStop Color="Black" Offset="1" />
+                    <GradientStop Color="White" Offset="0" />
+                </LinearGradientBrush>
+            </controls:WindowTitleControl.RegularButtonIconMouseHoverBrush>
+            <controls:WindowTitleControl.CloseButtonIconMouseHoverBrush>
+                <LinearGradientBrush>
+                    <GradientStop Color="Purple" Offset="0" />
+                    <GradientStop Color="Orange" Offset="1" />
+                </LinearGradientBrush>
+            </controls:WindowTitleControl.CloseButtonIconMouseHoverBrush>
+
+            <!-- Mouse Down Color -->
+            <controls:WindowTitleControl.RegularButtonIconMouseDownBrush>
+                <LinearGradientBrush>
+                    <GradientStop Color="Black" Offset="0" />
+                    <GradientStop Color="White" Offset="1" />
+                </LinearGradientBrush>
+            </controls:WindowTitleControl.RegularButtonIconMouseDownBrush>
+            <controls:WindowTitleControl.CloseButtonIconMouseDownBrush>
+                <LinearGradientBrush>
+                    <GradientStop Color="Purple" Offset="1" />
+                    <GradientStop Color="Orange" Offset="0" />
+                </LinearGradientBrush>
+            </controls:WindowTitleControl.CloseButtonIconMouseDownBrush>
+        </controls:WindowTitleControl>
+        
         <Grid Grid.Row="1">
             <!-- window content here -->
         </Grid>
