@@ -50,8 +50,9 @@ namespace Controls
             Loaded += WindowTitleControl_Loaded;
         }
 
-        void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            e.Handled = true;
             Window.DragMove();
         }
 
@@ -60,7 +61,7 @@ namespace Controls
             AeroResourceInitializer.Initialize();
 
             //take control of dragging.
-            Window.MouseDown += Window_MouseDown;
+            Window.MouseLeftButtonDown += Window_MouseLeftButtonDown;
         }
 
         private Window Window
