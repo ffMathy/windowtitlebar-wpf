@@ -122,10 +122,6 @@ publish/
 *.[Pp]ublish.xml
 *.azurePubxml
 
-# Enable "build/" folder in the NuGet Packages folder since NuGet packages use it for MSBuild targets
-# This line needs to be after the ignore of the build folder (and the packages folder if the line above has been uncommented)
-!packages/build/
-
 # Windows Azure Build Output
 csx/
 *.build.csdef
