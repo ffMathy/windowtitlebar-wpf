@@ -10,7 +10,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <controls:WindowTitleControl ShowOptions="True" />
+        <controls:WindowTitleControl ShowOptions="True" ShowOptionsRequested="WindowTitleControl_OnShowOptionsRequested" />
         <Grid Grid.Row="1">
             <!-- window content here -->
         </Grid>

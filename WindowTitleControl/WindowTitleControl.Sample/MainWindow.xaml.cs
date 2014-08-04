@@ -24,5 +24,10 @@ namespace WindowTitleControl.Sample
         {
             InitializeComponent();
         }
+
+        private void WindowTitleControl_OnShowOptionsRequested()
+        {
+            MessageBox.Show("Options button clicked!", "Stuff works", MessageBoxButton.OK);
+        }
     }
 }
