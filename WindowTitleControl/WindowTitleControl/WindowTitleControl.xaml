@@ -4,11 +4,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:controls="clr-namespace:Controls" 
-             mc:Ignorable="d"  d:DesignWidth="500" d:DataContext="{d:DesignInstance controls:WindowTitleControl}">
+             mc:Ignorable="d"  d:DesignWidth="500" d:DataContext="{d:DesignInstance controls:WindowTitleControl}"
+             SnapsToDevicePixels="True">
 
     <UserControl.Resources>
         <SolidColorBrush x:Key="SimpleButtonHoverBackgroundBrush" Color="{DynamicResource AeroColorDark}" Opacity="1" />
-        <SolidColorBrush x:Key="SimpleButtonHoverForegroundBrush" Color="White" Opacity="0.6" />
+        <SolidColorBrush x:Key="SimpleButtonHoverForegroundBrush" Color="White" Opacity="0.7" />
         <ControlTemplate x:Key="SimpleButtonStyle" TargetType="{x:Type Button}">
             <Grid>
                 <Grid.Style>
@@ -66,5 +67,7 @@
         <Button Grid.Column="4" Template="{DynamicResource SimpleButtonStyle}" Click="CloseClick">
             <Path Stretch="Uniform" Data="F1 M 26.9166,22.1667L 37.9999,33.25L 49.0832,22.1668L 53.8332,26.9168L 42.7499,38L 53.8332,49.0834L 49.0833,53.8334L 37.9999,42.75L 26.9166,53.8334L 22.1666,49.0833L 33.25,38L 22.1667,26.9167L 26.9166,22.1667 Z " Margin="2" Style="{StaticResource SimpleButtonPathStyle}"/>
         </Button>
+
+        <Rectangle IsHitTestVisible="False" Grid.Column="0" Fill="#05000000" Stroke="#25000000" StrokeThickness="1" Margin="-1,-1,-1,0" Grid.ColumnSpan="5" />
     </Grid>
 </UserControl>
