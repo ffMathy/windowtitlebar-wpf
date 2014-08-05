@@ -4,7 +4,6 @@ using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
-using AeroColor;
 
 namespace Controls
 {
@@ -141,7 +140,6 @@ namespace Controls
 
         void WindowTitleControl_Loaded(object sender, RoutedEventArgs e)
         {
-            AeroResourceInitializer.Initialize();
 
             //take control of dragging.
             Window.MouseLeftButtonDown += Window_MouseLeftButtonDown;
