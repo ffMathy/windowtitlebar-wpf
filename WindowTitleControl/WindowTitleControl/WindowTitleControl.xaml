@@ -10,7 +10,6 @@
              d:DesignWidth="500"
              d:DesignHeight="23"
              DataContext="{Binding RelativeSource={RelativeSource Self}}"
-             Height="{Binding CaptionHeight}"
              SnapsToDevicePixels="True"
              Name="MainWindowTitleControl">
 

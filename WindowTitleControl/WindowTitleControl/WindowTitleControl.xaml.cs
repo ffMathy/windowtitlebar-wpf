@@ -12,7 +12,6 @@ namespace Controls
     /// </summary>
     public partial class WindowTitleControl : INotifyPropertyChanged
     {
-        public static int CaptionHeight { get { return SystemInformation.CaptionHeight; } }
 
         public delegate void ShowOptionsRequestedEventHandler();
 
@@ -128,6 +127,8 @@ namespace Controls
         public WindowTitleControl()
         {
             InitializeComponent();
+
+            Height = SystemInformation.CaptionHeight;
 
             Loaded += WindowTitleControl_Loaded;
         }

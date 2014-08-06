@@ -5,7 +5,7 @@ using System.Windows.Data;
 
 namespace Controls.Converters
 {
-    public class ValueMultiplierConverter : DependencyObject, IValueConverter
+    internal class ValueMultiplierConverter : DependencyObject, IValueConverter
     {
         public static readonly DependencyProperty MultiplierProperty = DependencyProperty.Register(
             "Multiplier", typeof (double), typeof (ValueMultiplierConverter), new PropertyMetadata());
