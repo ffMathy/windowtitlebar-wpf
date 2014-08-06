@@ -36,85 +36,85 @@ namespace Controls
 
         #region Button Brushes
 
-        public static readonly DependencyProperty RegularButtonMouseOverBackgroundBrushProperty = DependencyProperty.Register(
-            "RegularButtonMouseOverBackgroundBrush", typeof (Brush), typeof (WindowTitleControl), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(238, 238, 238))));
+        public static readonly DependencyProperty RegularButtonHoverBackgroundProperty = DependencyProperty.Register(
+            "RegularButtonHoverBackground", typeof (Brush), typeof (WindowTitleControl), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(238, 238, 238))));
 
-        public Brush RegularButtonMouseOverBackgroundBrush
+        public Brush RegularButtonHoverBackground
         {
-            get { return (Brush) GetValue(RegularButtonMouseOverBackgroundBrushProperty); }
-            set { SetValue(RegularButtonMouseOverBackgroundBrushProperty, value); }
+            get { return (Brush) GetValue(RegularButtonHoverBackgroundProperty); }
+            set { SetValue(RegularButtonHoverBackgroundProperty, value); }
         }
 
-        public static readonly DependencyProperty CloseButtonMouseOverBackgroundBrushProperty = DependencyProperty.Register(
-            "CloseButtonMouseOverBackgroundBrush", typeof(Brush), typeof(WindowTitleControl), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(224, 67, 67))));
+        public static readonly DependencyProperty CloseButtonHoverBackgroundProperty = DependencyProperty.Register(
+            "CloseButtonHoverBackground", typeof(Brush), typeof(WindowTitleControl), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(224, 67, 67))));
 
-        public Brush CloseButtonMouseOverBackgroundBrush
+        public Brush CloseButtonHoverBackground
         {
-            get { return (Brush) GetValue(CloseButtonMouseOverBackgroundBrushProperty); }
-            set { SetValue(CloseButtonMouseOverBackgroundBrushProperty, value); }
+            get { return (Brush) GetValue(CloseButtonHoverBackgroundProperty); }
+            set { SetValue(CloseButtonHoverBackgroundProperty, value); }
         }
 
-        public static readonly DependencyProperty RegularButtonMouseDownBackgroundBrushProperty = DependencyProperty.Register(
-            "RegularButtonMouseDownBackgroundBrush", typeof(Brush), typeof(WindowTitleControl), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(78, 166, 234))));
+        public static readonly DependencyProperty RegularButtonClickBackgroundProperty = DependencyProperty.Register(
+            "RegularButtonClickBackground", typeof(Brush), typeof(WindowTitleControl), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(78, 166, 234))));
 
-        public Brush RegularButtonMouseDownBackgroundBrush
+        public Brush RegularButtonClickBackground
         {
-            get { return (Brush) GetValue(RegularButtonMouseDownBackgroundBrushProperty); }
-            set { SetValue(RegularButtonMouseDownBackgroundBrushProperty, value); }
+            get { return (Brush) GetValue(RegularButtonClickBackgroundProperty); }
+            set { SetValue(RegularButtonClickBackgroundProperty, value); }
         }
 
-        public static readonly DependencyProperty CloseButtonMouseDownBackgroundBrushProperty = DependencyProperty.Register(
-            "CloseButtonMouseDownBackgroundBrush", typeof(Brush), typeof(WindowTitleControl), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(153, 61, 61))));
+        public static readonly DependencyProperty CloseButtonClickBackgroundProperty = DependencyProperty.Register(
+            "CloseButtonClickBackground", typeof(Brush), typeof(WindowTitleControl), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(153, 61, 61))));
 
-        public Brush CloseButtonMouseDownBackgroundBrush
+        public Brush CloseButtonClickBackground
         {
-            get { return (Brush) GetValue(CloseButtonMouseDownBackgroundBrushProperty); }
-            set { SetValue(CloseButtonMouseDownBackgroundBrushProperty, value); }
+            get { return (Brush) GetValue(CloseButtonClickBackgroundProperty); }
+            set { SetValue(CloseButtonClickBackgroundProperty, value); }
         }
 
-        public static readonly DependencyProperty StaticButtonIconBrushProperty = DependencyProperty.Register(
-            "StaticButtonIconBrush", typeof(Brush), typeof(WindowTitleControl), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(204, 204, 204))));
+        public static readonly DependencyProperty DefaultButtonForegroundProperty = DependencyProperty.Register(
+            "DefaultButtonForeground", typeof(Brush), typeof(WindowTitleControl), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(204, 204, 204))));
 
-        public Brush StaticButtonIconBrush
+        public Brush DefaultButtonForeground
         {
-            get { return (Brush) GetValue(StaticButtonIconBrushProperty); }
-            set { SetValue(StaticButtonIconBrushProperty, value); }
+            get { return (Brush) GetValue(DefaultButtonForegroundProperty); }
+            set { SetValue(DefaultButtonForegroundProperty, value); }
         }
 
-        public static readonly DependencyProperty RegularButtonIconMouseHoverBrushProperty = DependencyProperty.Register(
-            "RegularButtonIconMouseHoverBrush", typeof(Brush), typeof(WindowTitleControl), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(0, 0, 0))));
+        public static readonly DependencyProperty RegularButtonHoverForegroundProperty = DependencyProperty.Register(
+            "RegularButtonHoverForeground", typeof(Brush), typeof(WindowTitleControl), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(0, 0, 0))));
 
-        public Brush RegularButtonIconMouseHoverBrush
+        public Brush RegularButtonHoverForeground
         {
-            get { return (Brush) GetValue(RegularButtonIconMouseHoverBrushProperty); }
-            set { SetValue(RegularButtonIconMouseHoverBrushProperty, value); }
+            get { return (Brush) GetValue(RegularButtonHoverForegroundProperty); }
+            set { SetValue(RegularButtonHoverForegroundProperty, value); }
         }
 
-        public static readonly DependencyProperty CloseButtonIconMouseHoverBrushProperty = DependencyProperty.Register(
-            "CloseButtonIconMouseHoverBrush", typeof(Brush), typeof(WindowTitleControl), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(255, 255, 255))));
+        public static readonly DependencyProperty CloseButtonHoverForegroundProperty = DependencyProperty.Register(
+            "CloseButtonHoverForeground", typeof(Brush), typeof(WindowTitleControl), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(255, 255, 255))));
 
-        public Brush CloseButtonIconMouseHoverBrush
+        public Brush CloseButtonHoverForeground
         {
-            get { return (Brush) GetValue(CloseButtonIconMouseHoverBrushProperty); }
-            set { SetValue(CloseButtonIconMouseHoverBrushProperty, value); }
+            get { return (Brush) GetValue(CloseButtonHoverForegroundProperty); }
+            set { SetValue(CloseButtonHoverForegroundProperty, value); }
         }
 
-        public static readonly DependencyProperty RegularButtonIconMouseDownBrushProperty = DependencyProperty.Register(
-            "RegularButtonIconMouseDownBrush", typeof(Brush), typeof(WindowTitleControl), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(255, 255, 255))));
+        public static readonly DependencyProperty RegularButtonClickForegroundProperty = DependencyProperty.Register(
+            "RegularButtonClickForeground", typeof(Brush), typeof(WindowTitleControl), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(255, 255, 255))));
 
-        public Brush RegularButtonIconMouseDownBrush
+        public Brush RegularButtonClickForeground
         {
-            get { return (Brush) GetValue(RegularButtonIconMouseDownBrushProperty); }
-            set { SetValue(RegularButtonIconMouseDownBrushProperty, value); }
+            get { return (Brush) GetValue(RegularButtonClickForegroundProperty); }
+            set { SetValue(RegularButtonClickForegroundProperty, value); }
         }
 
-        public static readonly DependencyProperty CloseButtonIconMouseDownBrushProperty = DependencyProperty.Register(
-            "CloseButtonIconMouseDownBrush", typeof(Brush), typeof(WindowTitleControl), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(255, 255, 255))));
+        public static readonly DependencyProperty CloseButtonClickForegroundProperty = DependencyProperty.Register(
+            "CloseButtonClickForeground", typeof(Brush), typeof(WindowTitleControl), new PropertyMetadata(new SolidColorBrush(Color.FromRgb(255, 255, 255))));
 
-        public Brush CloseButtonIconMouseDownBrush
+        public Brush CloseButtonClickForeground
         {
-            get { return (Brush) GetValue(CloseButtonIconMouseDownBrushProperty); }
-            set { SetValue(CloseButtonIconMouseDownBrushProperty, value); }
+            get { return (Brush) GetValue(CloseButtonClickForegroundProperty); }
+            set { SetValue(CloseButtonClickForegroundProperty, value); }
         }
 
         #endregion

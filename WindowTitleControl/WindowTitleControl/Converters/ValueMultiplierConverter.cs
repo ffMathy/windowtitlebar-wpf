@@ -8,7 +8,7 @@ namespace Controls.Converters
     public class ValueMultiplierConverter : DependencyObject, IValueConverter
     {
         public static readonly DependencyProperty MultiplierProperty = DependencyProperty.Register(
-            "Multiplier", typeof (double), typeof (ValueMultiplierConverter), new PropertyMetadata(default(double)));
+            "Multiplier", typeof (double), typeof (ValueMultiplierConverter), new PropertyMetadata());
 
         public double Multiplier
         {
@@ -23,19 +23,15 @@ namespace Controls.Converters
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            throw new NotImplementedException();
+            return ParseDouble(value) / Multiplier;
         }
 
         private static double ParseDouble(object value)
         {
             double parsedDouble;
             if (!double.TryParse(value.ToString(), out parsedDouble)) throw new ArgumentException("Value must be parsable as double.", "value");
+
             return parsedDouble;
         }
-
-        //protected override Freezable CreateInstanceCore()
-        //{
-        //    throw new NotImplementedException();
-        //}
     }
 }
